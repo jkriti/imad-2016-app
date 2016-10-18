@@ -27,6 +27,28 @@ var articleOne = {
     
 };
 
+var articleTwo = {
+    title:"Article Two | Kriti Jain",
+    heading:"Article Two",
+    date:"Sep 5,2016",
+    content:`<p>
+                    This is the content for my second article.
+                </p>
+                `
+    
+};
+
+var articleThree = {
+    title:"Article Three | Kriti Jain",
+    heading:"Article Three",
+    date:"Sep 5,2016",
+    content:`<p>
+                    This is the content for my third article.
+                </p>
+                `
+    
+};
+
 function createTemplate(data){
     var title = data.title;
     var date = data.date;
@@ -77,12 +99,12 @@ app.get('/article-one',function(req,res){
 });
 
 app.get('/article-two',function(req,res){
-      res.sendFile(path.join(__dirname, 'ui', 'article-two.html'));
+      res.send(createTemplate(articleTwo));
     
 });
 
 app.get('/article-three',function(req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'article-three.html'));
+     res.send(createTemplate(articleThree));
     
 });
 
