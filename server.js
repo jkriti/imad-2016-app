@@ -1,5 +1,8 @@
 var express = require('express');
 var morgan = require('morgan');
+//library used to output logs of our server
+//i.e. what requests are coming to our servers
+//and how we are responding
 var path = require('path');
 
 var app = express();
